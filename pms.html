@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Management Dashboard</title>
+
+    <link rel="stylesheet" href="pms.css">
+</head>
+
+<body>
+
+    <!------------------- NAVBAR ----------------->
+    <nav class="navbar">
+
+        <div class="logo">
+            <span>Product</span>Manager
+        </div>
+
+        <div class="nav-links">
+            <a href="#dashboard">Dashboard</a>
+            <a href="#products">Products</a>
+            <a href="#add-product">Add Product</a>
+        </div>
+    </nav>
+
+    <!--------------------- MAIN ---------------------->
+    <main>
+
+        <!------------------- BANNER--------------------->
+        <section class="banner">
+
+            <div class="banner-content">
+
+                <p class="banner-label">
+                    PRODUCT MANAGEMENT
+                </p>
+
+                <h1>
+                    Manage your products
+                    <span>easily.</span>
+                </h1>
+
+                <p>
+                    Add, update, search and manage your products
+                    from one simple dashboard.
+                </p>
+
+                <a href="#add-product" class="banner-btn">
+                    Add New Product
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!------------------ DASHBOARD ----------------->
+        <section class="dashboard" id="dashboard">
+
+            <div class="section-heading">
+                <div>
+                    <p class="small-title">OVERVIEW</p>
+                    <h2>Dashboard</h2>
+                </div>
+            </div>
+
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div>
+                        <p>Total Products</p>
+                        <h3 id="totalProducts">0</h3>
+                    </div>
+                </div>
+
+
+                <div class="stat-card">
+                    <div>
+                        <p>In Stock</p>
+                        <h3 id="inStock">0</h3>
+                    </div>
+                </div>
+
+
+                <div class="stat-card">
+                    <div>
+                        <p>Low Stock</p>
+                        <h3 id="lowStock">0</h3>
+                    </div>
+                </div>
+
+
+                <div class="stat-card">
+                    <div>
+                        <p>Out of Stock</p>
+                        <h3 id="outStock">0</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!---------------- ADD PRODUCT ------------>
+        <section class="add-product-section" id="add-product">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="small-title">PRODUCT MANAGEMENT</p>
+                    <h2>Add Product</h2>
+                </div>
+
+            </div>
+
+
+            <form id="productForm" class="product-form">
+
+                <div class="form-group">
+
+                    <label for="productName">
+                        Product Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="productName"
+                        placeholder="Enter product name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="category">
+                        Category
+                    </label>
+
+                    <select id="category" required>
+
+                        <option value="">
+                            Select Category
+                        </option>
+
+                        <option value="Electronics">
+                            Electronics
+                        </option>
+
+                        <option value="Furniture">
+                            Furniture
+                        </option>
+
+                        <option value="Accessories">
+                            Accessories
+                        </option>
+
+                        <option value="Clothing">
+                            Clothing
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="price">
+                        Price
+                    </label>
+
+                    <input
+                        type="number"
+                        id="price"
+                        placeholder="Enter price"
+                        min="0"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="stock">
+                        Stock
+                    </label>
+
+                    <input
+                        type="number"
+                        id="stock"
+                        placeholder="Enter stock quantity"
+                        min="0"
+                        required
+                    >
+
+                </div>
+
+
+                <button type="submit" class="primary-btn">
+                    Add Product
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!---------------- PRODUCTS ------------->
+        <section class="products-section" id="products">
+
+            <div class="products-header">
+
+                <div>
+                    <p class="small-title">INVENTORY</p>
+                    <h2>Products</h2>
+                </div>
+
+            </div>
+
+
+            <!-- Search + Filter -->
+            <div class="filters">
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search products..."
+                    >
+
+                </div>
+
+
+                <select id="filterCategory">
+
+                    <option value="All">
+                        All Categories
+                    </option>
+
+                    <option value="Electronics">
+                        Electronics
+                    </option>
+
+                    <option value="Furniture">
+                        Furniture
+                    </option>
+
+                    <option value="Accessories">
+                        Accessories
+                    </option>
+
+                    <option value="Clothing">
+                        Clothing
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Product Cards -->
+            <div id="productList" class="product-grid">
+
+                <!-- Products will be added using JavaScript -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!---------------- FOOTER ---------------->
+    <footer>
+
+        <p>
+            © 2026 Product Manager. Built with HTML, CSS & JavaScript.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+
+/* --------------NAVBAR------------ */
+
+.navbar {
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+}
+
+
+.logo span {
+    color: #2563eb;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: #4b5563;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+/* -----------BANNER--------- */
+
+.banner {
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 7%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ffffff
+        );
+}
+
+
+.banner-content {
+    max-width: 700px;
+}
+
+
+.banner-label {
+    color: #2563eb;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 35px;
+}
+
+
+.banner h1 {
+    font-size: clamp(40px, 6vw, 70px);
+
+    line-height: 1.05;
+
+    color: #111827;
+
+    margin-bottom: 25px;
+}
+
+
+.banner h1 span {
+    color: #2563eb;
+}
+
+
+.banner-btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 600;
+    margin-top: 35px;
+    transition: 0.3s;
+}
+
+
+.banner-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* --------------COMMON SECTION--------- */
+
+section {
+    padding: 70px 7%;
+}
+
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+
+.small-title {
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: #2563eb;
+
+    margin-bottom: 5px;
+}
+
+
+.section-heading h2,
+.products-header h2 {
+    font-size: 32px;
+
+    color: #111827;
+}
+
+
+/* -------------DASHBOARD---------- */
+
+.dashboard {
+    background: #ffffff;
+}
+
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.stat-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    background: #ffffff;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+
+.stat-card p {
+    color: #6b7280;
+
+    font-size: 14px;
+
+    margin-bottom: 3px;
+}
+
+
+.stat-card h3 {
+    font-size: 25px;
+
+    color: #111827;
+}
+
+
+/* -------------ADD PRODUCT FORM----------*/
+
+.add-product-section {
+    background: #f6f7fb;
+}
+
+
+.product-form {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+}
+
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.form-group label {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+
+.form-group input,
+.form-group select,
+.filters input,
+.filters select {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: white;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.filters input:focus,
+.filters select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+.primary-btn {
+    width: fit-content;
+
+    align-self: end;
+
+    padding: 13px 25px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.primary-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ----------PRODUCTS--------*/
+
+.products-section {
+    background: #ffffff;
+}
+
+
+.products-header {
+    margin-bottom: 25px;
+}
+
+
+/* ----------FILTERS---------*/
+
+.filters {
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+.search-box {
+    flex: 1;
+}
+
+
+.filters select {
+    max-width: 220px;
+}
+
+/* --------FOOTER------- */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    background: #111827;
+
+    color: #9ca3af;
+
+    font-size: 14px;
+}
